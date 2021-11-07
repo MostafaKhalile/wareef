@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wareef/src/core/utils/size_config.dart';
 
 class MobileLogin extends StatelessWidget {
   static const String routeName = '/mobile_login';

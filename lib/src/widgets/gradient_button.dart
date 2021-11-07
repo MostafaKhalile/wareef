@@ -12,6 +12,7 @@ class GradientButton extends StatelessWidget {
   final Widget child;
   final ButtonTapCallback onButtonTap;
   const GradientButton({
+    Key? key,
     required this.radius,
     required this.height,
     required this.width,
@@ -19,13 +20,14 @@ class GradientButton extends StatelessWidget {
     required this.gradEnd,
     required this.child,
     required this.onButtonTap,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: height,
       width: width,
+      // ignore: deprecated_member_use
       child: RaisedButton(
         onPressed: onButtonTap,
         shape:
@@ -33,6 +35,7 @@ class GradientButton extends StatelessWidget {
         padding: const EdgeInsets.all(0.0),
         child: Ink(
           decoration: BoxDecoration(
+              // ignore: unnecessary_null_comparison
               gradient: onButtonTap != null
                   ? LinearGradient(
                       colors: [AppColors.kLightGreyColor, Colors.grey[500]!],
