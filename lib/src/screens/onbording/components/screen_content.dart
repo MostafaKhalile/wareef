@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wareef/src/config/localization/app_localizations_delegates.dart';
 import 'package:wareef/src/core/utils/size_config.dart';
 
 class SplashContent extends StatelessWidget {
@@ -14,8 +13,6 @@ class SplashContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
-    final ThemeData _theme = Theme.of(context);
-    final AppLocalizations? _language = AppLocalizations.of(context);
     return Container(
       width: _size.width,
       height: _size.height,

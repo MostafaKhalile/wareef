@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 class AppLocalizations {
   late Locale locale;
 
-  static late AppLocalizations? _language;
   AppLocalizations(this.locale);
 
   // Helper method to keep the code in the widgets concise

@@ -1,4 +1,4 @@
-import 'package:dio/dio.dart';
+// import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
 import 'src/controller/cubits/locale_cubit/locale_cubit.dart';
