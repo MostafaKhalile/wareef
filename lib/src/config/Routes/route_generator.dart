@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wareef/src/screens/mobile_login_screen.dart';
 import 'package:wareef/src/screens/onbording/onboarding_screen.dart';
 
 class RouteGenerator {
@@ -10,6 +11,8 @@ class RouteGenerator {
     switch (settings.name) {
       case OnboardingScreen.routeName:
         return CupertinoPageRoute(builder: (_) => const OnboardingScreen());
+      case MobileLogin.routeName:
+        return CupertinoPageRoute(builder: (_) => const MobileLogin());
       default:
         // If there is no such named route in the switch statement, e.g. /third
         return _errorRoute();

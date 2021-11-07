@@ -5,6 +5,7 @@ import 'package:wareef/src/core/utils/constants.dart';
 import 'package:wareef/src/core/utils/size_config.dart';
 
 // This is the best practice
+import '../../mobile_login_screen.dart';
 import 'screen_content.dart';
 
 class Body extends StatefulWidget {
@@ -96,7 +97,8 @@ class _BodyState extends State<Body> {
                           ),
                         ],
                       ),
-                      onPressed: () {},
+                      onPressed: () =>
+                          Navigator.pushNamed(context, MobileLogin.routeName),
                       style: ButtonStyle(
                           overlayColor:
                               MaterialStateProperty.all(Colors.transparent)),
