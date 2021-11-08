@@ -7,7 +7,7 @@ mixin AppTheme on ThemeData {
     return ThemeData(
       fontFamily: "GESSTwo",
       primaryColor: AppColors.kPrimaryColor,
-      splashColor: AppColors.kBorderGreyColor,
+      splashColor: AppColors.kLighterGreyColor,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       scaffoldBackgroundColor: Colors.white,
       appBarTheme: const AppBarTheme(elevation: 0.0),

@@ -24,7 +24,7 @@ class AppColors {
   static const kLightBlackColor = Color(0xFF101010);
   static const kTextGreyColor = Color(0xFF9E9E9E);
   static const kLightGreyColor = Color(0xFFA8A8A8);
-  static const kBorderGreyColor = Color(0xFFE1E1E1);
+  static const kLighterGreyColor = Color(0xFFF2F2F2);
   static const kShadowGreyColor = Color(0xFFE9E9E9);
 }
 

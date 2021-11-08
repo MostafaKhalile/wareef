@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wareef/src/screens/mobileLogin/mobile_login_screen.dart';
 import 'package:wareef/src/screens/onbording/onboarding_screen.dart';
+import 'package:wareef/src/screens/pinCodeScreen/pin_code_screen.dart';
 import 'package:wareef/src/screens/registration/registration_screen.dart';
 
 class RouteGenerator {
@@ -16,6 +17,9 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const MobileLogin());
       case RegistrationScreen.routeName:
         return MaterialPageRoute(builder: (_) => const RegistrationScreen());
+      case PinCodeScreen.routeName:
+        return MaterialPageRoute(
+            fullscreenDialog: true, builder: (_) => const PinCodeScreen());
       default:
         // If there is no such named route in the switch statement, e.g. /third
         return _errorRoute();

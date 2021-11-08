@@ -6,6 +6,7 @@ import 'package:wareef/src/core/utils/constants.dart';
 import 'package:wareef/src/core/utils/keyboard_unit.dart';
 import 'package:wareef/src/core/utils/size_config.dart';
 import 'package:wareef/src/core/utils/validation.dart';
+import 'package:wareef/src/screens/pinCodeScreen/pin_code_screen.dart';
 import 'package:wareef/src/screens/registration/registration_screen.dart';
 import 'package:wareef/src/widgets/gradient_button.dart';
 
@@ -120,7 +121,7 @@ class _BodyState extends State<Body> {
                           content: Text(_language.translate(
                               "confirmations", "processing_login")!)),
                     );
-                    Navigator.pushNamed(context, RegistrationScreen.routeName);
+                    Navigator.pushNamed(context, PinCodeScreen.routeName);
                   }
                 },
                 width: SizeConfig.screenWidth * .8,
@@ -139,7 +140,8 @@ class _BodyState extends State<Body> {
                       decoration: TextDecoration.underline,
                       fontWeight: FontWeight.w200),
                 ),
-                onPressed: () => print("Skip"),
+                onPressed: () =>
+                    Navigator.pushNamed(context, RegistrationScreen.routeName),
                 style: ButtonStyle(
                     overlayColor:
                         MaterialStateProperty.all(Colors.transparent)),
