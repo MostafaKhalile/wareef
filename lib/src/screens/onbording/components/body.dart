@@ -5,7 +5,7 @@ import 'package:wareef/src/core/utils/constants.dart';
 import 'package:wareef/src/core/utils/size_config.dart';
 
 // This is the best practice
-import '../../mobile_login_screen.dart';
+import '../../mobileLogin/mobile_login_screen.dart';
 import 'screen_content.dart';
 
 class Body extends StatefulWidget {

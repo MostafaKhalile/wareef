@@ -27,10 +27,14 @@ InputDecorationTheme _buildInputDecoration() {
   return const InputDecorationTheme(
       alignLabelWithHint: true,
       labelStyle: TextStyle(
-          color: AppColors.kLabelColor,
+          color: AppColors.kLightGreyColor,
           fontWeight: FontWeight.w600,
           fontSize: 20),
-      contentPadding: EdgeInsets.all(10),
+      hintStyle: TextStyle(
+        color: AppColors.kLightGreyColor,
+        fontWeight: FontWeight.w600,
+      ),
+      // contentPadding: EdgeInsets.all(10),
       focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(width: 2.0, color: AppColors.kLabelColor)));
+          borderSide: BorderSide(width: 2.0, color: AppColors.kPrimaryColor)));
 }

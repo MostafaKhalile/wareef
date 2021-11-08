@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 class AppColors {
   static const kPrimaryColor = Color(0xFFC9B71A);
   static const kPrimaryColorLight = Color(0xFFE8D52A);
+  static const kPrimaryGradientEnd = Color(0xFFD1A509);
+  static const kPrimaryGradientStart = Color(0xFFEFD05E);
   static const kCardColorLight = Color(0xFFC498CB);
   static const kCardColorDark = Color(0xFFA180A7);
   static const kSecondaryColor = Color(0xFF85A380);
@@ -19,8 +21,8 @@ class AppColors {
   static const kYellowColor = Color(0xFFFFCA62);
   static const kDarkYellowColor = Color(0xFFFFCC00);
   static const kDarkGreyColor = Color(0xFF808080);
-  static const kScaffoldGreyColor = Color(0xFFF8F8F8);
-  static const kLightGreyColor = Color(0xFFF2F6F9);
+  static const kTextGreyColor = Color(0xFF9E9E9E);
+  static const kLightGreyColor = Color(0xFFA8A8A8);
   static const kBorderGreyColor = Color(0xFFE1E1E1);
   static const kShadowGreyColor = Color(0xFFE9E9E9);
 }

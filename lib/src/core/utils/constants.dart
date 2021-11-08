@@ -25,7 +25,7 @@ const String kBuyIcon = "assets/svg/buy.svg";
 const String kCalendarIcon = "assets/svg/calendar.svg";
 
 //#############png's########################
-const String kFlowersImage = "assets/images/flowers.png";
+const String ksaFlag = "assets/imgs/ksa.png";
 const String kPartCategoryImage = "assets/images/partyPlanning.png";
 const String kBeautyCategoryImage = "assets/images/beauty.png";
 const String kPartyCategoryImage = "assets/images/wedding_card.png";

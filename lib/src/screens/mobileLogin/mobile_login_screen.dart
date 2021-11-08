@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'components/body.dart';
+
 class MobileLogin extends StatelessWidget {
   static const String routeName = '/mobile_login';
   const MobileLogin({
@@ -31,47 +33,9 @@ class MobileLogin extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 40),
                         child: Image.asset("assets/imgs/logo.png"),
                       )),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Container(
-                      height: _size.height * 0.7,
-                      width: _size.width,
-                      decoration: BoxDecoration(
-                          color: _theme.scaffoldBackgroundColor,
-                          borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(15),
-                            topRight: Radius.circular(15),
-                          )),
-                    ),
-                  )
+                  Body(size: _size, theme: _theme)
                 ],
               ))),
-    );
-  }
-}
-
-//Salon Cover Image in the background
-class SalonCoverImage extends StatelessWidget {
-  const SalonCoverImage({
-    Key? key,
-    required this.image,
-  }) : super(key: key);
-  final String image;
-
-  @override
-  Widget build(BuildContext context) {
-    final _size = MediaQuery.of(context).size;
-    return Positioned(
-      top: -_size.height * .25,
-      child: Container(
-        width: _size.width,
-        height: _size.height * 0.9,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              fit: BoxFit.fill,
-              image: AssetImage("assets/imgs/background.png")),
-        ),
-      ),
     );
   }
 }

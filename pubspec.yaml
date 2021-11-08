@@ -90,6 +90,11 @@ flutter:
           weight: 500
         - asset: assets/fonts/GE_SS_Two_Bold.otf
           weight: 900
-
+    - family: WareefIcons
+      fonts:
+        - asset: assets/fonts/wareefIcons.ttf
+    - family: SegoeUI
+      fonts:
+        - asset: assets/fonts/SegoeUI.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

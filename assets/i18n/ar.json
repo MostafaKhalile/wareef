@@ -8,5 +8,15 @@
         "save_your_time": "وفر وقتك و مجهودك و خليها علينا",
         "skip": "تخطى",
         "login": "دخول"
+    },
+    "mobileLogin": {
+        "we_will_send_verify_code": "سنرسل لك رمز التفعيل لتوثيق الحساب",
+        "by_tap_login_I_confirm_that": "من خلال الضغط علي التالي أوكد أني قرأت ووافقت علي",
+        "conditions_and_terms": " \nشروط و احكام ",
+        "inaddition_to": "خدمة وريف  بالإضافة الي",
+        "privacy_policy": " سياسة الخصوصية "
+    },
+    "confimations": {
+        "processing_login": "جارى تسجيل الدخول ..."
     }
 }
