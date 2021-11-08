@@ -92,7 +92,8 @@ class _BodyState extends State<Body> {
                           Text(
                             (index < splashData.length - 1)
                                 ? _language!.translate("onboarding", "skip")!
-                                : _language!.translate("onboarding", "login")!,
+                                : _language!
+                                    .translate("authentication", "login")!,
                             style: _theme.textTheme.button!,
                           ),
                         ],

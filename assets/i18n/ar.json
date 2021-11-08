@@ -1,4 +1,18 @@
 {
+    "authentication": {
+        "login": "دخول",
+        "register": "تسجيل"
+    },
+    "inputLabels": {
+        "name": "الاسم",
+        "address": "العنوان",
+        "email": "البريد الإلكترونى"
+    },
+    "inputHints": {
+        "username": "الاسم رباعى",
+        "address": "ادخل عنوانك",
+        "email": "admin@wareef.com"
+    },
     "onboarding": {
         "add_you_offer": "اضف عرضك",
         "select_your_location_on_map": "حدد موقع العقار علي الخارطة  .... !",
@@ -6,8 +20,7 @@
         "find_us_any_time_any_where": "تجدنا في أي وقت و أينما تريد",
         "track_your_offers": "تتبع عروضك",
         "save_your_time": "وفر وقتك و مجهودك و خليها علينا",
-        "skip": "تخطى",
-        "login": "دخول"
+        "skip": "تخطى"
     },
     "mobileLogin": {
         "we_will_send_verify_code": "سنرسل لك رمز التفعيل لتوثيق الحساب",
@@ -16,7 +29,18 @@
         "inaddition_to": "خدمة وريف  بالإضافة الي",
         "privacy_policy": " سياسة الخصوصية "
     },
-    "confimations": {
-        "processing_login": "جارى تسجيل الدخول ..."
+    "confirmations": {
+        "processing_login": "جارى تسجيل الدخول ...",
+        "confirmed_info": "البيانات صحيحة"
+    },
+    "registrationScreen": {
+        "photo_gallery": "معرض الصور",
+        "camera": "الكاميرا",
+        "gender": "النوع",
+        "male": "ذكر",
+        "female": "أنثى",
+        "additional_info": "معلومات إضافية",
+        "your_profile_picture": "صورتك الشخصية",
+        "shouldnot_exceed_5_mega": "يجب ان لا تتخطي ال 5 ميغا"
     }
 }

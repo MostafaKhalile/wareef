@@ -13,6 +13,8 @@ mixin AppTheme on ThemeData {
       appBarTheme: const AppBarTheme(elevation: 0.0),
       iconTheme: const IconThemeData(color: AppColors.kPrimaryColor),
       inputDecorationTheme: _buildInputDecoration(),
+      snackBarTheme: const SnackBarThemeData(
+          contentTextStyle: TextStyle(fontFamily: "GESTwo")),
       buttonTheme: const ButtonThemeData(
           buttonColor: Colors.black, splashColor: Colors.grey),
       textTheme: const TextTheme(

@@ -1,6 +1,14 @@
 class Validator {
   String? error;
 
+  String? isMandatory(String? data) {
+    if (data == null || data == '') {
+      return error = "لا يمكن ترك هذه الخانة فارغة";
+    }
+
+    return error = null;
+  }
+
   String? isValidEmail(String? data) {
     if (data == null || data == '') {
       return error = "برجاء ادخال البريد الإلكتروني";

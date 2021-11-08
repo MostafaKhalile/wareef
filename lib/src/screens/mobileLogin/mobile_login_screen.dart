@@ -33,7 +33,9 @@ class MobileLogin extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 40),
                         child: Image.asset("assets/imgs/logo.png"),
                       )),
-                  Body(size: _size, theme: _theme)
+                  Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Body(size: _size, theme: _theme))
                 ],
               ))),
     );
