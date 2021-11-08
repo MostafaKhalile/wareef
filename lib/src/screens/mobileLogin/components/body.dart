@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:wareef/src/config/Colors/colors.dart';
 import 'package:wareef/src/config/localization/app_localizations_delegates.dart';
 import 'package:wareef/src/core/utils/constants.dart';
+import 'package:wareef/src/core/utils/keyboard_unit.dart';
 import 'package:wareef/src/core/utils/size_config.dart';
 import 'package:wareef/src/core/utils/validation.dart';
 import 'package:wareef/src/widgets/gradient_button.dart';
@@ -113,6 +114,7 @@ class _BodyState extends State<Body> {
                     if (_mobileFormKey.currentState!.validate()) {
                       // If the form is valid, display a snackbar. In the real world,
                       // you'd often call a server or save the information in a database.
+                      KeyboardUtil.hideKeyboard(context);
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                             backgroundColor: AppColors.kGreenColor,
