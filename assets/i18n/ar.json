@@ -19,7 +19,8 @@
         "right_code": "الكود صحيح"
     },
     "errorMessages": {
-        "wrong_code": "الكود الذى أدخلته غير صحيح"
+        "wrong_code": "الكود الذى أدخلته غير صحيح",
+        "you_should_agree_conditions": "يجب أن توافق على الشروط والأحكام"
     },
     "onboarding": {
         "add_you_offer": "اضف عرضك",
@@ -34,8 +35,10 @@
         "we_will_send_verify_code": "سنرسل لك رمز التفعيل لتوثيق الحساب",
         "by_tap_login_I_confirm_that": "من خلال الضغط علي التالي أوكد أني قرأت ووافقت علي",
         "conditions_and_terms": " \nشروط و احكام ",
+        "the_conditions_and_the_terms": " الشروط و الاحكام ",
         "inaddition_to": "خدمة وريف  بالإضافة الي",
-        "privacy_policy": " سياسة الخصوصية "
+        "privacy_policy": " سياسة الخصوصية ",
+        "I_agree": "أوافق على"
     },
     "registrationScreen": {
         "photo_gallery": "معرض الصور",

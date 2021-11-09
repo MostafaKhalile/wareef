@@ -1,6 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:wareef/src/config/Colors/colors.dart';
 import 'package:wareef/src/config/localization/app_localizations_delegates.dart';
+import 'package:wareef/src/core/utils/custom_snackbar.dart';
 import 'package:wareef/src/core/utils/keyboard_unit.dart';
 import 'package:wareef/src/core/utils/size_config.dart';
 import 'package:wareef/src/core/utils/validation.dart';
@@ -29,6 +31,8 @@ class _RegstrationBodyState extends State<RegstrationBody> {
   final TextEditingController _addressController = TextEditingController();
   final TextEditingController _additionalInfoController =
       TextEditingController();
+
+  bool? agreement = false;
 
   @override
   Widget build(BuildContext context) {
@@ -139,6 +143,45 @@ class _RegstrationBodyState extends State<RegstrationBody> {
                         keyboardType: TextInputType.multiline,
                         maxLines: 3,
                       ),
+                      Center(
+                        child: CheckboxListTile(
+                          controlAffinity: ListTileControlAffinity.leading,
+                          activeColor: AppColors.kPrimaryColor,
+                          title: RichText(
+                            text: TextSpan(
+                              style: const TextStyle(
+                                  fontFamily: "GESSTwo",
+                                  color: AppColors.kDarkTextColor,
+                                  height: 1.5),
+                              children: [
+                                TextSpan(
+                                  text: _language.translate(
+                                      "mobileLogin", "I_agree")!,
+                                  style: const TextStyle(
+                                      color: AppColors.kDarkTextColor),
+                                ),
+                                TextSpan(
+                                  text: _language.translate("mobileLogin",
+                                      "the_conditions_and_the_terms")!,
+                                  style: const TextStyle(
+                                      decoration: TextDecoration.underline,
+                                      color: AppColors.kTextGreyColor),
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      print("link");
+                                    },
+                                ),
+                              ],
+                            ),
+                          ),
+                          onChanged: (value) {
+                            setState(() {
+                              agreement = value;
+                            });
+                          },
+                          value: agreement,
+                        ),
+                      ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 20),
                         child: GradientButton(
@@ -147,16 +190,23 @@ class _RegstrationBodyState extends State<RegstrationBody> {
                           height: 50,
                           radius: 30,
                           onButtonTap: () {
-                            if (_regstrationFormKey.currentState!.validate()) {
-                              KeyboardUtil.hideKeyboard(context);
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                    backgroundColor: AppColors.kGreenColor,
-                                    content: Text(_language.translate(
-                                        "confirmations", "confirmed_info")!)),
-                              );
-                              Navigator.pushNamed(
-                                  context, RegistrationScreen.routeName);
+                            if (agreement!) {
+                              if (_regstrationFormKey.currentState!
+                                  .validate()) {
+                                KeyboardUtil.hideKeyboard(context);
+
+                                Snackbar().showConfirmSnackBar(
+                                    context,
+                                    _language.translate(
+                                        "confirmations", "confirmed_info")!);
+                                // Navigator.pushNamed(
+                                //     context, RegistrationScreen.routeName);
+                              }
+                            } else {
+                              Snackbar().showErrorSnackBar(
+                                  context,
+                                  _language.translate("errorMessages",
+                                      "you_should_agree_conditions")!);
                             }
                           },
                           width: SizeConfig.screenWidth * .8,
