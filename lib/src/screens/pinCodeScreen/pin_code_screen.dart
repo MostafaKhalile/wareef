@@ -1,7 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:wareef/src/config/Colors/colors.dart';
 import 'package:wareef/src/config/localization/app_localizations_delegates.dart';
+import 'package:wareef/src/core/utils/custom_snackbar.dart';
 import 'package:wareef/src/core/utils/size_config.dart';
 import 'package:wareef/src/widgets/gradient_button.dart';
 
@@ -9,7 +11,9 @@ class PinCodeScreen extends StatefulWidget {
   static const String routeName = "/pinCode";
   const PinCodeScreen({
     Key? key,
+    required this.phoneNumber,
   }) : super(key: key);
+  final String phoneNumber;
   @override
   _PinCodepagestate createState() => _PinCodepagestate();
 }
@@ -52,12 +56,51 @@ class _PinCodepagestate extends State<PinCodeScreen> {
                             Icons.arrow_forward,
                             color: Colors.black,
                           ),
-                          onPressed: () {},
+                          onPressed: () => Navigator.pop(context),
                         )
                       ],
                     ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: RichText(
+                      text: TextSpan(
+                        style: const TextStyle(
+                            fontFamily: "GESSTwo",
+                            color: AppColors.kDarkTextColor,
+                            fontSize: 16,
+                            height: 1.5),
+                        children: [
+                          TextSpan(
+                            text: _language!.translate(
+                                "otpScreen", "we_will_send_verifcation_on")!,
+                            style: const TextStyle(
+                                color: AppColors.kDarkTextColor),
+                          ),
+                          TextSpan(
+                            text: "${widget.phoneNumber} 966+",
+                            style: const TextStyle(
+                                fontFamily: "SegoeUI",
+                                decoration: TextDecoration.underline,
+                                color: AppColors.kTextGreyColor),
+                          ),
+                          TextSpan(
+                              text: _language.translate(
+                                  "otpScreen", "edit_number?")!,
+                              style: const TextStyle(
+                                  color: AppColors.kOrangeColor),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  Navigator.pop(context);
+                                }),
+                        ],
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
@@ -78,8 +121,8 @@ class _PinCodepagestate extends State<PinCodeScreen> {
                       child: Column(
                         children: [
                           Text(
-                            _language!.translate("registrationScreen",
-                                "shouldnot_exceed_5_mega")!,
+                            _language.translate(
+                                "otpScreen", "enter_4_digits_code")!,
                             style: _theme.textTheme.headline6!.copyWith(
                                 color: AppColors.kDarkTextColor, fontSize: 16),
                             textAlign: TextAlign.center,
@@ -88,17 +131,20 @@ class _PinCodepagestate extends State<PinCodeScreen> {
                             textDirection: TextDirection.ltr,
                             child: VerificationCode(
                               textStyle: const TextStyle(
-                                  fontSize: 20.0, color: Colors.black),
+                                  fontFamily: "SegoeUI",
+                                  fontSize: 20.0,
+                                  color: Colors.black),
                               itemSize: size.width * 0.2,
                               underlineColor: Theme.of(context).primaryColor,
-                              clearAll: const Padding(
-                                padding: EdgeInsets.all(8.0),
+                              clearAll: Padding(
+                                padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  'مسح الكود',
-                                  style: TextStyle(
-                                    fontSize: 14.0,
-                                    decoration: TextDecoration.underline,
-                                  ),
+                                  _language.translate(
+                                      "otpScreen", "delete_code")!,
+                                  style: const TextStyle(
+                                      fontSize: 14.0,
+                                      decoration: TextDecoration.underline,
+                                      color: Colors.redAccent),
                                 ),
                               ),
                               onCompleted: (value) {
@@ -121,8 +167,8 @@ class _PinCodepagestate extends State<PinCodeScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  _language.translate("registrationScreen",
-                                      "shouldnot_exceed_5_mega")!,
+                                  _language.translate(
+                                      "otpScreen", "resend_code")!,
                                   textAlign: TextAlign.center,
                                   style: _theme.textTheme.headline6!.copyWith(
                                       color: AppColors.kDarkTextColor,
@@ -132,7 +178,7 @@ class _PinCodepagestate extends State<PinCodeScreen> {
                                   tween: Tween(begin: 30.0, end: 0.0),
                                   duration: const Duration(seconds: 30),
                                   builder: (_, dynamic value, child) => Text(
-                                    "00:${value.toInt()} ثانية",
+                                    " 00:${value.toInt()} ${_language.translate("otpScreen", "second")!}  ",
                                     style: _theme.textTheme.headline6!.copyWith(
                                         color: AppColors.kDarkTextColor,
                                         fontSize: 16),
@@ -153,8 +199,7 @@ class _PinCodepagestate extends State<PinCodeScreen> {
                                   });
                                 },
                                 child: Text(_language.translate(
-                                    "registrationScreen",
-                                    "shouldnot_exceed_5_mega")!)),
+                                    "otpScreen", "resend_code")!)),
                           const SizedBox(
                             height: 15,
                           ),
@@ -162,7 +207,15 @@ class _PinCodepagestate extends State<PinCodeScreen> {
                             width: double.infinity,
                             onButtonTap: () {
                               if (_code == "1111") {
-                                print("Confirmed");
+                                Snackbar().showConfirmSnackBar(
+                                    context,
+                                    _language.translate(
+                                        "confirmations", "right_code")!);
+                              } else {
+                                Snackbar().showErrorSnackBar(
+                                    context,
+                                    _language.translate(
+                                        "errorMessages", "wrong_code")!);
                               }
                             },
                             gradEnd: AppColors.kPrimaryGradientEnd,
@@ -170,8 +223,7 @@ class _PinCodepagestate extends State<PinCodeScreen> {
                             height: 50,
                             radius: 30,
                             child: Text(
-                              _language.translate("registrationScreen",
-                                  "shouldnot_exceed_5_mega")!,
+                              _language.translate("otpScreen", "activate")!,
                               style: _theme.textTheme.button,
                               textAlign: TextAlign.start,
                             ),

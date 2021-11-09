@@ -6,6 +6,7 @@ class AppColors {
   static const kPrimaryColorLight = Color(0xFFE8D52A);
   static const kPrimaryGradientEnd = Color(0xFFD1A509);
   static const kPrimaryGradientStart = Color(0xFFEFD05E);
+  static const kOrangeColor = Color(0xFFFFBB36);
   static const kCardColorLight = Color(0xFFC498CB);
   static const kCardColorDark = Color(0xFFA180A7);
   static const kSecondaryColor = Color(0xFF85A380);

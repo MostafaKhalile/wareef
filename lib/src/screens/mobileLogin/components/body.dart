@@ -36,8 +36,8 @@ class _BodyState extends State<Body> {
     return Form(
       key: _mobileFormKey,
       child: Container(
-        height: widget._size.height * 0.7,
-        width: widget._size.width,
+        height: SizeConfig.screenHeight * 0.7,
+        width: SizeConfig.screenWidth,
         decoration: BoxDecoration(
             color: widget._theme.scaffoldBackgroundColor,
             borderRadius: const BorderRadius.only(
@@ -121,7 +121,8 @@ class _BodyState extends State<Body> {
                           content: Text(_language.translate(
                               "confirmations", "processing_login")!)),
                     );
-                    Navigator.pushNamed(context, PinCodeScreen.routeName);
+                    Navigator.pushNamed(context, PinCodeScreen.routeName,
+                        arguments: _mobileController.text);
                   }
                 },
                 width: SizeConfig.screenWidth * .8,
@@ -140,8 +141,10 @@ class _BodyState extends State<Body> {
                       decoration: TextDecoration.underline,
                       fontWeight: FontWeight.w200),
                 ),
-                onPressed: () =>
-                    Navigator.pushNamed(context, RegistrationScreen.routeName),
+                onPressed: () => Navigator.pushNamed(
+                  context,
+                  RegistrationScreen.routeName,
+                ),
                 style: ButtonStyle(
                     overlayColor:
                         MaterialStateProperty.all(Colors.transparent)),

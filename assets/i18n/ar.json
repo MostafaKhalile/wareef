@@ -13,6 +13,14 @@
         "address": "ادخل عنوانك",
         "email": "admin@wareef.com"
     },
+    "confirmations": {
+        "processing_login": "جارى تسجيل الدخول ...",
+        "confirmed_info": "البيانات صحيحة",
+        "right_code": "الكود صحيح"
+    },
+    "errorMessages": {
+        "wrong_code": "الكود الذى أدخلته غير صحيح"
+    },
     "onboarding": {
         "add_you_offer": "اضف عرضك",
         "select_your_location_on_map": "حدد موقع العقار علي الخارطة  .... !",
@@ -29,10 +37,6 @@
         "inaddition_to": "خدمة وريف  بالإضافة الي",
         "privacy_policy": " سياسة الخصوصية "
     },
-    "confirmations": {
-        "processing_login": "جارى تسجيل الدخول ...",
-        "confirmed_info": "البيانات صحيحة"
-    },
     "registrationScreen": {
         "photo_gallery": "معرض الصور",
         "camera": "الكاميرا",
@@ -42,5 +46,14 @@
         "additional_info": "معلومات إضافية",
         "your_profile_picture": "صورتك الشخصية",
         "shouldnot_exceed_5_mega": "يجب ان لا تتخطي ال 5 ميغا"
+    },
+    "otpScreen": {
+        "we_will_send_verifcation_on": "سنرسل لك رمز التفعيل علي الرقم\n",
+        "edit_number?": " تعديل الرقم  ؟",
+        "enter_4_digits_code": "ادخل الكود الذي يتكون من 4 ارقام",
+        "resend_code": "إعادة ارسال الرمز",
+        "delete_code": "مسح الكود",
+        "second": "ثانية",
+        "activate": "تفعيل"
     }
 }

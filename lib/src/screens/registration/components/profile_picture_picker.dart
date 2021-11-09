@@ -31,7 +31,7 @@ class _ProfilePicturePickerState extends State<ProfilePicturePicker> {
         });
         // context.read<EditprofilepictureBloc>().add(ChangeProfilePicture(image));
       } else {
-        Snackbar().showSnackBar(context, "لم تقم بإختار صورة");
+        Snackbar().showErrorSnackBar(context, "لم تقم بإختار صورة");
         setState(() {
           _uploadingProfilePicture = false;
         });
