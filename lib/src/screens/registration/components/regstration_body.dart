@@ -83,19 +83,22 @@ class _RegstrationBodyState extends State<RegstrationBody> {
                 child: SingleChildScrollView(
                     physics: const BouncingScrollPhysics(),
                     child: Column(children: [
-                      CircularTextField(
-                        controller: _firstNameController,
-                        validation: Validator().isValidUsername,
-                        prefixIcon: const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 30),
-                          child: Icon(
-                            WareefIcons.user,
-                            color: AppColors.kLightGreyColor,
-                            size: 15,
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: CircularTextField(
+                          controller: _firstNameController,
+                          validation: Validator().isValidUsername,
+                          prefixIcon: const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 30),
+                            child: Icon(
+                              WareefIcons.user,
+                              color: AppColors.kLightGreyColor,
+                              size: 15,
+                            ),
                           ),
+                          label: _language.translate("inputLabels", "name"),
+                          hint: _language.translate("inputHints", "name"),
                         ),
-                        label: _language.translate("inputLabels", "name"),
-                        hint: _language.translate("inputHints", "name"),
                       ),
                       CircularTextField(
                         controller: _addressController,

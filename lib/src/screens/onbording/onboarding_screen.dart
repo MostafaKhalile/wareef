@@ -4,7 +4,7 @@ import 'package:wareef/src/core/utils/size_config.dart';
 import 'components/body.dart';
 
 class OnboardingScreen extends StatelessWidget {
-  static const String routeName = "/splash";
+  static const String routeName = "/";
 
   const OnboardingScreen({Key? key}) : super(key: key);
   @override
