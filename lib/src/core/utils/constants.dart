@@ -1,4 +1,7 @@
 //##############dimensions's##################
+import 'package:flutter/material.dart';
+import 'package:wareef/src/config/Colors/colors.dart';
+
 const double kDefaultPadding = 20.0;
 const double kDefaultRadius = 15.0;
 
@@ -25,7 +28,7 @@ const String kBuyIcon = "assets/svg/buy.svg";
 const String kCalendarIcon = "assets/svg/calendar.svg";
 
 //#############png's########################
-const String kFlowersImage = "assets/images/flowers.png";
+const String ksaFlag = "assets/imgs/ksa.png";
 const String kPartCategoryImage = "assets/images/partyPlanning.png";
 const String kBeautyCategoryImage = "assets/images/beauty.png";
 const String kPartyCategoryImage = "assets/images/wedding_card.png";
@@ -45,3 +48,24 @@ const String kGetAllCategory = '/get-all-category';
 const String kUserToken = 'accessToken';
 //############# Animations's ########################
 const kAnimationDuration = Duration(milliseconds: 200);
+
+InputDecoration circularInputDecorationTheme() {
+  return const InputDecoration(
+      fillColor: Colors.white,
+      contentPadding: EdgeInsets.only(bottom: 20.0, left: 20.0, right: 20.0),
+      border: OutlineInputBorder(
+          borderSide: BorderSide(width: 1),
+          borderRadius: BorderRadius.all(Radius.circular(30.0))),
+      focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(width: 2),
+          borderRadius: BorderRadius.all(Radius.circular(30.0))),
+      disabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(width: 1),
+          borderRadius: BorderRadius.all(Radius.circular(30.0))),
+      enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(width: 1),
+          borderRadius: BorderRadius.all(Radius.circular(30.0))),
+      hintStyle: TextStyle(color: AppColors.kLightGreyColor),
+      labelStyle: TextStyle(fontSize: 16, color: AppColors.kLightBlackColor),
+      floatingLabelBehavior: FloatingLabelBehavior.auto);
+}

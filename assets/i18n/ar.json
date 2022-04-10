@@ -1,4 +1,27 @@
 {
+    "authentication": {
+        "login": "دخول",
+        "register": "تسجيل"
+    },
+    "inputLabels": {
+        "name": "الاسم",
+        "address": "العنوان",
+        "email": "البريد الإلكترونى"
+    },
+    "inputHints": {
+        "username": "الاسم رباعى",
+        "address": "ادخل عنوانك",
+        "email": "admin@wareef.com"
+    },
+    "confirmations": {
+        "processing_login": "جارى تسجيل الدخول ...",
+        "confirmed_info": "البيانات صحيحة",
+        "right_code": "الكود صحيح"
+    },
+    "errorMessages": {
+        "wrong_code": "الكود الذى أدخلته غير صحيح",
+        "you_should_agree_conditions": "يجب أن توافق على الشروط والأحكام"
+    },
     "onboarding": {
         "add_you_offer": "اضف عرضك",
         "select_your_location_on_map": "حدد موقع العقار علي الخارطة  .... !",
@@ -6,7 +29,34 @@
         "find_us_any_time_any_where": "تجدنا في أي وقت و أينما تريد",
         "track_your_offers": "تتبع عروضك",
         "save_your_time": "وفر وقتك و مجهودك و خليها علينا",
-        "skip": "تخطى",
-        "login": "دخول"
+        "skip": "تخطى"
+    },
+    "mobileLogin": {
+        "we_will_send_verify_code": "سنرسل لك رمز التفعيل لتوثيق الحساب",
+        "by_tap_login_I_confirm_that": "من خلال الضغط علي التالي أوكد أني قرأت ووافقت علي",
+        "conditions_and_terms": " \nشروط و احكام ",
+        "the_conditions_and_the_terms": " الشروط و الاحكام ",
+        "inaddition_to": "خدمة وريف  بالإضافة الي",
+        "privacy_policy": " سياسة الخصوصية ",
+        "I_agree": "أوافق على"
+    },
+    "registrationScreen": {
+        "photo_gallery": "معرض الصور",
+        "camera": "الكاميرا",
+        "gender": "النوع",
+        "male": "ذكر",
+        "female": "أنثى",
+        "additional_info": "معلومات إضافية",
+        "your_profile_picture": "صورتك الشخصية",
+        "shouldnot_exceed_5_mega": "يجب ان لا تتخطي ال 5 ميغا"
+    },
+    "otpScreen": {
+        "we_will_send_verifcation_on": "سنرسل لك رمز التفعيل علي الرقم\n",
+        "edit_number?": " تعديل الرقم  ؟",
+        "enter_4_digits_code": "ادخل الكود الذي يتكون من 4 ارقام",
+        "resend_code": "إعادة ارسال الرمز",
+        "delete_code": "مسح الكود",
+        "second": "ثانية",
+        "activate": "تفعيل"
     }
 }

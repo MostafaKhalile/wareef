@@ -5,7 +5,7 @@ import 'package:wareef/src/core/utils/constants.dart';
 import 'package:wareef/src/core/utils/size_config.dart';
 
 // This is the best practice
-import '../../mobile_login_screen.dart';
+import '../../mobileLogin/mobile_login_screen.dart';
 import 'screen_content.dart';
 
 class Body extends StatefulWidget {
@@ -92,7 +92,8 @@ class _BodyState extends State<Body> {
                           Text(
                             (index < splashData.length - 1)
                                 ? _language!.translate("onboarding", "skip")!
-                                : _language!.translate("onboarding", "login")!,
+                                : _language!
+                                    .translate("authentication", "login")!,
                             style: _theme.textTheme.button!,
                           ),
                         ],

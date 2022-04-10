@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wareef/src/config/Colors/colors.dart';
 
-typedef ButtonTapCallback = void Function();
-
 class GradientButton extends StatelessWidget {
   final double radius;
   final double height;
@@ -10,7 +8,7 @@ class GradientButton extends StatelessWidget {
   final Color gradStart;
   final Color gradEnd;
   final Widget child;
-  final ButtonTapCallback onButtonTap;
+  final VoidCallback? onButtonTap;
   const GradientButton({
     Key? key,
     required this.radius,
@@ -35,15 +33,14 @@ class GradientButton extends StatelessWidget {
         padding: const EdgeInsets.all(0.0),
         child: Ink(
           decoration: BoxDecoration(
-              // ignore: unnecessary_null_comparison
               gradient: onButtonTap != null
                   ? LinearGradient(
-                      colors: [AppColors.kLightGreyColor, Colors.grey[500]!],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
+                      colors: [gradStart, gradEnd],
+                      end: Alignment.bottomCenter,
+                      begin: Alignment.topCenter,
                     )
                   : LinearGradient(
-                      colors: [gradStart, gradEnd],
+                      colors: [AppColors.kLightGreyColor, Colors.grey[500]!],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
